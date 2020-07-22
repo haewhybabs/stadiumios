@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "53998620065",
+    "firebase_url": "https://stadium-1dfe3.firebaseio.com",
+    "project_id": "stadium-1dfe3",
+    "storage_bucket": "stadium-1dfe3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53998620065:android:9f0a750f494f5c19bd4fe0",
+        "android_client_info": {
+          "package_name": "com.stadiumrn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53998620065-90ocm0m9g2vhahp64mup88ag68c7d59v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnBeqoJKfbK898UEmfUcXo0KtXNVCWdqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53998620065-90ocm0m9g2vhahp64mup88ag68c7d59v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -99,7 +99,7 @@ export default class Home extends Component {
       <View style={Styles.container}>
         <StatusBar backgroundColor={statusBarRed} barStyle='light-content' />
         {/* <Header headerText="HOME" navigation={this.props.navigation} /> */}
-        <Text style={Styles.headerText}>Which Place are you ?</Text>
+        <Text style={Styles.headerText}>Select Your Option</Text>
         <ScrollView>{temp}</ScrollView>
       </View>
     );

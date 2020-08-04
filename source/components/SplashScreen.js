@@ -18,7 +18,8 @@ import { statusBarRed } from '../constants/const_strings';
 
 // const server_url = 'ws://stadium.durbintest.pro/websocket';
 // const server_url = 'ws://192.168.0.4:3000/websocket'
-const server_url = 'wss://stadiumweb.herokuapp.com/websocket';
+//const server_url = 'wss://stadiumweb.herokuapp.com/websocket';
+const server_url = 'wss://test.stadiyumvip.com/websocket';
 
 Meteor.connect(server_url);
 

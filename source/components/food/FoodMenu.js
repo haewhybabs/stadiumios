@@ -140,7 +140,9 @@ export default class FoodMenu extends Component {
   handleSubmit() {
     this.props.navigation.navigate("Cart");
   }
-
+  handleGoBack=()=>{
+    this.props.navigation.goBack();
+  }
   handleSearch() {
     const { searchText, stadium } = this.state;
 
@@ -178,7 +180,17 @@ export default class FoodMenu extends Component {
 
         <ScrollView>
           <SliderBox images={images} circleLoop={true} />
+          <View style={{alignSelf:'flex-start',marginTop:5,marginLeft:5}}>
+            <Icon
+             onPress={()=>this.handleGoBack()}
+              name="ios-arrow-back"
+              type="ionicon"
+              color="black"
+            />
+            </View>
           <View>
+            
+            
             <SearchPanel
               updateState={this.updateState.bind(this)}
               handleSearch={this.handleSearch.bind(this)}

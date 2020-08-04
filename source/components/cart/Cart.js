@@ -41,6 +41,9 @@ export default class Cart extends Component {
   updateState(obj) {
     this.setState(obj);
   }
+  handleGoBack=()=>{
+    this.props.navigation.goBack();
+  }
 
   updateQuantity(id, value) {
     const { quantity, cart } = this.state;
@@ -127,6 +130,14 @@ export default class Cart extends Component {
 
         {arrCart.length > 0 && (
           <ScrollView>
+            <View style={{alignSelf:'flex-start',marginTop:5,marginLeft:5}}>
+            <Icon
+             onPress={()=>this.handleGoBack()}
+              name="ios-arrow-back"
+              type="ionicon"
+              color="black"
+            />
+            </View>
             <Text style={Styles.headerText}>Added Items:</Text>
 
             {arrCart.map((item, index) => {

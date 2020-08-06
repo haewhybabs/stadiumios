@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, Image } from 'react-native';
 
-import Meteor from 'meteor-react-native';
+import Meteor, { Mongo, withTracker } from 'meteor-react-native';
 
 import moment from 'moment';
 import { NavigationEvents } from 'react-navigation';
@@ -12,7 +12,7 @@ import HistoryField from './HistoryField';
 import { getUserAsync, moderateScale } from '../../constants/const_functions';
 import SpinView from '../common/Spinner';
 
-export default class OrderHistory extends Component {
+class OrderHistory extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,7 +68,9 @@ export default class OrderHistory extends Component {
   }
 
   render() {
-    const { history, isLoaded } = this.state;
+    console.log("History :",this.props.history)
+    const isLoaded = this.state.isLoaded;
+    const history= this.props.history;
 
     var recent = [];
     var running = [];
@@ -184,3 +186,16 @@ export default class OrderHistory extends Component {
     );
   }
 }
+
+let AppContainer = withTracker(() => {
+  const currentUser=Meteor.user();
+  Meteor.subscribe("fetchorders",currentUser._id);
+  let data = Orders.find({ createdBy: currentUser._id }, { sort: { createdAt: -1 } }).fetch();
+  
+  
+  return {
+      history:data
+  };
+})(OrderHistory)
+
+export default AppContainer;

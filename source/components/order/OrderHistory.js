@@ -12,6 +12,8 @@ import HistoryField from './HistoryField';
 import { getUserAsync, moderateScale } from '../../constants/const_functions';
 import SpinView from '../common/Spinner';
 
+let Orders = new Mongo.Collection("Orders");
+
 class OrderHistory extends Component {
   constructor(props) {
     super(props);

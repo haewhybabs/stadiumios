@@ -19,7 +19,7 @@
         "@react-native-firebase/messaging": "^7.1.7",
         "jetifier": "^1.6.4",
         "meteor-react-native": "^2.0.6",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "native-base": "^2.13.12",
         "prop-types": "^15.7.2",
         "react": "16.11.0",
